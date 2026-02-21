@@ -1,3 +1,2 @@
-theme: jekyll-theme-minimal
-title: Octocat's homepage
-description: Bookmark this to keep an eye on my project updates!
+Termos simples: Uso apenas pra postar meu próprio conteúdo, sem spam.
+Não coletamos dados de usuários além do necessário pro OAuth.
