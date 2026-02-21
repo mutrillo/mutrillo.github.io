@@ -1,1 +1,3 @@
-Termos simples: Uso apenas pra postar meu próprio conteúdo, sem spam.
+theme: jekyll-theme-minimal
+title: Octocat's homepage
+description: Bookmark this to keep an eye on my project updates!
