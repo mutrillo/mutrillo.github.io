@@ -4,36 +4,163 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Achados Shopee - Compartilhe os melhores achados no TikTok</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
-        footer { margin-top: 50px; text-align: center; font-size: 0.9em; color: #666; }
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #ff5e62, #ff9966);
+            color: white;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+        }
+        .accordion-button {
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1 class="text-center mt-5">Achados Shopee</h1>
-        <p class="lead text-center">Descubra e compartilhe os melhores achados da Shopee diretamente no TikTok de forma prática e automática.</p>
-        
-        <div class="row mt-5">
-            <div class="col-md-8 offset-md-2">
-                <h3>O que é o Achados Shopee?</h3>
-                <p>Nosso aplicativo ajuda criadores de conteúdo a postar vídeos de produtos incríveis da Shopee no TikTok de maneira rápida. Usuários autenticam sua conta TikTok e o app sugere ou posta conteúdos com base nos achados selecionados.</p>
-                
-                <h3>Como funciona?</h3>
-                <ul>
-                    <li>Conecte sua conta TikTok</li>
-                    <li>Selecione produtos da Shopee</li>
-                    <li>Gere ou poste vídeos automaticamente</li>
-                    <li>Alcance mais pessoas com conteúdos relevantes</li>
-                </ul>
-                
-                <p><strong>Importante:</strong> O app segue todas as diretrizes do TikTok e só posta com autorização do usuário. Não é spam nem automação em massa sem consentimento.</p>
-            </div>
+        <div class="hero">
+            <h1>Achados Shopee</h1>
+            <p class="lead">Descubra e compartilhe os melhores achados da Shopee diretamente no TikTok de forma prática e automática.</p>
         </div>
-        
-        <div class="text-center mt-4">
-            <a href="https://github.com/SEU_USUARIO/SEU_REPO" class="btn btn-primary">Veja o código-fonte no GitHub</a>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h3 class="text-center mb-4">O que é o Achados Shopee?</h3>
+                <p>Nosso aplicativo ajuda criadores de conteúdo a postar vídeos de produtos incríveis da Shopee no TikTok de maneira rápida. Usuários autenticam sua conta TikTok e o app sugere ou posta conteúdos com base nos achados selecionados.</p>
+
+                <h3 class="mt-5 text-center mb-4">Como funciona?</h3>
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item">Conecte sua conta TikTok de forma segura (via API oficial)</li>
+                    <li class="list-group-item">Selecione produtos da Shopee que você ama</li>
+                    <li class="list-group-item">Gere sugestões de vídeos ou poste automaticamente com sua aprovação</li>
+                    <li class="list-group-item">Alcance mais pessoas com conteúdos relevantes e autênticos</li>
+                </ul>
+
+                <p class="text-center fw-bold mb-5">
+                    <strong>Importante:</strong> Todo post requer sua confirmação. Seguimos as diretrizes do TikTok — nada de spam ou automação sem consentimento.
+                </p>
+
+                <!-- Seção FAQ -->
+                <h2 class="text-center mb-4">Perguntas Frequentes (FAQ)</h2>
+                
+                <div class="accordion" id="faqAccordion">
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                O que é o Achados Shopee exatamente?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Achados Shopee é uma ferramenta que ajuda criadores de conteúdo a descobrir e compartilhar produtos incríveis da Shopee no TikTok de forma rápida e prática. Usamos a API oficial do TikTok para postar vídeos com sua autorização.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                É seguro conectar minha conta TikTok?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sim! Usamos apenas a autenticação oficial da API do TikTok. Não armazenamos sua senha, e você pode revogar o acesso a qualquer momento nas configurações da sua conta TikTok (em "Segurança" > "Apps e sites conectados").
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                O app posta vídeos automaticamente sem minha permissão?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Não. Todo post requer sua confirmação explícita. O "automático" refere-se apenas à sugestão de conteúdo e edição rápida — você sempre aprova e inicia o post.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Posso usar para postar em massa ou spam?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Não permitimos spam ou violações das diretrizes do TikTok/Shopee. O app é para criadores que querem compartilhar achados genuínos. Qualquer abuso pode resultar em suspensão.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                Como revogo o acesso do app à minha conta TikTok?
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Vá em Configurações no app TikTok > Segurança > Apps e sites conectados > Encontre "Achados Shopee" > Revogar acesso.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSix">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                O app é gratuito? Há planos pagos?
+                            </button>
+                        </h2>
+                        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Atualmente é gratuito para uso básico. Futuramente pode haver recursos premium (ex: mais sugestões ou edições avançadas), mas nada obrigatório.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                Preciso de algo específico para usar o app?
+                            </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Apenas uma conta TikTok ativa e acesso à Shopee para selecionar produtos. O app funciona no navegador (web app em desenvolvimento).
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="text-center mt-5 mb-5">
+                    <a href="https://github.com/SEU_USUARIO/SEU_REPOSITORIO" target="_blank" class="btn btn-primary btn-lg">
+                        Veja o código-fonte no GitHub
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -44,5 +171,8 @@
             <a href="termos.html">Termos de Serviço</a>
         </p>
     </footer>
+
+    <!-- Bootstrap JS (necessário para o accordion funcionar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
