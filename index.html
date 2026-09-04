@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Universo em Slide — Curiosidades no Instagram</title>
+<style>
+  :root{
+    --ink:#12102A;
+    --midnight:#1B1840;
+    --violet:#4B3F86;
+    --lilac:#C9C2F0;
+    --parchment:#F6F3ED;
+    --spark:#E8AA3E;
+    --line: rgba(246,243,237,0.14);
+  }
+
+  *{ box-sizing:border-box; }
+
+  html{ scroll-behavior:smooth; }
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--parchment);
+    font-family: "Iowan Old Style","Palatino Linotype",Georgia,serif;
+    line-height:1.6;
+  }
+
+  .sans{ font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+
+  a{ color:var(--spark); }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* HERO */
+  .hero{
+    position:relative;
+    overflow:hidden;
+    padding:100px 24px 84px;
+    background:
+      radial-gradient(600px 300px at 15% -10%, rgba(232,170,62,0.15), transparent 60%),
+      radial-gradient(500px 260px at 90% 0%, rgba(75,63,134,0.35), transparent 55%),
+      linear-gradient(180deg, var(--midnight), var(--ink) 75%);
+    border-bottom:1px solid var(--line);
+    text-align:center;
+  }
+
+  .hero .stars{
+    position:absolute;
+    inset:0;
+    background-image:
+      radial-gradient(1.5px 1.5px at 20% 30%, var(--parchment) 60%, transparent 61%),
+      radial-gradient(1.5px 1.5px at 75% 20%, var(--parchment) 60%, transparent 61%),
+      radial-gradient(1px 1px at 60% 55%, var(--lilac) 60%, transparent 61%),
+      radial-gradient(1.5px 1.5px at 85% 65%, var(--parchment) 60%, transparent 61%),
+      radial-gradient(1px 1px at 35% 70%, var(--lilac) 60%, transparent 61%),
+      radial-gradient(1.5px 1.5px at 10% 60%, var(--parchment) 60%, transparent 61%);
+    opacity:0.5;
+  }
+
+  .hero-inner{ position:relative; }
+
+  .kicker{
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size:0.8rem;
+    letter-spacing:0.02em;
+    color:var(--lilac);
+    margin:0 0 18px;
+  }
+
+  .hero h1{
+    font-size:clamp(2.6rem, 6vw, 4rem);
+    line-height:1.05;
+    margin:0 0 20px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+
+  .hero p.lead{
+    max-width:520px;
+    margin:0 auto;
+    color:var(--lilac);
+    font-size:1.15rem;
+  }
+
+  /* SECTIONS */
+  section{ padding:64px 0; border-bottom:1px solid var(--line); }
+  section:last-of-type{ border-bottom:none; }
+
+  h2{
+    font-size:1.7rem;
+    font-weight:600;
+    margin:0 0 28px;
+    max-width:22ch;
+  }
+
+  .steps{
+    list-style:none;
+    counter-reset: step;
+    margin:0; padding:0;
+    display:grid;
+    gap:20px;
+  }
+
+  .steps li{
+    counter-increment: step;
+    display:grid;
+    grid-template-columns:auto 1fr;
+    gap:18px;
+    align-items:start;
+  }
+
+  .steps li::before{
+    content: counter(step);
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size:0.85rem;
+    width:30px; height:30px;
+    border:1px solid var(--violet);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--lilac);
+    flex-shrink:0;
+    margin-top:2px;
+  }
+
+  .steps p{ margin:0; color:#DAD5EF; }
+
+  .note{
+    margin-top:32px;
+    padding:18px 20px;
+    border-left:2px solid var(--spark);
+    background:rgba(232,170,62,0.06);
+    color:#EFE7D0;
+    font-size:0.98rem;
+  }
+
+  /* FAQ */
+  details{
+    border-bottom:1px solid var(--line);
+    padding:20px 0;
+  }
+  details:first-of-type{ border-top:1px solid var(--line); }
+
+  summary{
+    cursor:pointer;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:16px;
+    font-size:1.05rem;
+    color:var(--parchment);
+  }
+
+  summary::-webkit-details-marker{ display:none; }
+
+  summary::after{
+    content:"+";
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size:1.4rem;
+    color:var(--spark);
+    flex-shrink:0;
+    transition: transform 0.2s ease;
+  }
+
+  details[open] summary::after{ content:"–"; }
+
+  details .answer{
+    margin-top:14px;
+    color:#C9C4DE;
+    max-width:64ch;
+    font-size:0.98rem;
+  }
+
+  footer{
+    padding:48px 24px 60px;
+    text-align:center;
+    font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size:0.85rem;
+    color:#8D87B0;
+  }
+
+  footer a{ color:#B7AEDD; text-decoration:none; }
+  footer a:hover{ text-decoration:underline; }
+
+  footer .links{ margin-top:10px; }
+  footer .links span{ margin:0 8px; color:#5B5480; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+  }
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="stars"></div>
+    <div class="wrap hero-inner">
+      <p class="kicker sans">Uma curiosidade por dia, direto no feed</p>
+      <h1>Universo em Slide</h1>
+      <p class="lead">Carrosséis de curiosidades gerados e publicados no Instagram através da API oficial da Meta, com o dono da conta no controle o tempo todo.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section id="como-funciona">
+      <h2>Como funciona</h2>
+      <ol class="steps">
+        <li><p>A conta do Instagram é conectada de forma oficial, usando a Graph API da Meta — sem senhas armazenadas fora da própria Meta.</p></li>
+        <li><p>Um conjunto de curiosidades é selecionado e transformado em slides de carrossel, com texto e imagem gerados para o formato do Instagram.</p></li>
+        <li><p>Os slides passam por uma fila de publicação com horários definidos, sempre dentro dos limites de uso da própria API da Meta.</p></li>
+        <li><p>Cada carrossel é publicado na conta autorizada, mantendo o histórico do que já foi postado para nunca repetir um conteúdo.</p></li>
+      </ol>
+      <p class="note">O Universo em Slide publica apenas na conta que o autorizou a fazer isso, dentro das regras da plataforma da Meta — nada de conteúdo enviado para contas de terceiros.</p>
+    </section>
+
+    <section id="faq">
+      <h2>Perguntas frequentes</h2>
+
+      <details open>
+        <summary>O que é o Universo em Slide?</summary>
+        <div class="answer">É uma automação que gera e publica carrosséis de curiosidades no Instagram, usando a API oficial da Meta para acessar a conta autorizada e realizar as publicações.</div>
+      </details>
+
+      <details>
+        <summary>É seguro conectar minha conta do Instagram?</summary>
+        <div class="answer">Sim. A conexão usa apenas a autenticação oficial da Meta (OAuth). Nenhuma senha é armazenada fora da própria Meta, e o acesso pode ser revogado a qualquer momento pelas configurações da conta.</div>
+      </details>
+
+      <details>
+        <summary>O conteúdo é publicado sem revisão?</summary>
+        <div class="answer">O conteúdo é gerado e agendado automaticamente, mas segue um roteiro fixo de curiosidades e formatos definidos previamente pelo responsável pela conta — não há geração livre nem publicação fora desse escopo.</div>
+      </details>
+
+      <details>
+        <summary>Isso é usado para postar em massa ou spam?</summary>
+        <div class="answer">Não. As publicações seguem uma frequência fixa e moderada, dentro dos limites de uso da API da Meta, e respeitam as diretrizes de conteúdo do Instagram.</div>
+      </details>
+
+      <details>
+        <summary>Como revogo o acesso à minha conta do Instagram?</summary>
+        <div class="answer">Pelo Instagram ou Facebook: em Configurações → Segurança → Apps e sites conectados, localize o app e selecione remover acesso. O efeito é imediato.</div>
+      </details>
+
+      <details>
+        <summary>Quais dados da conta são acessados?</summary>
+        <div class="answer">Apenas o necessário para publicar conteúdo em nome da conta autorizada — permissões de publicação da Graph API. Nenhum dado é vendido ou compartilhado com terceiros.</div>
+      </details>
+
+      <details>
+        <summary>Preciso de uma conta comercial do Instagram?</summary>
+        <div class="answer">Sim, a publicação automática via Graph API exige uma conta comercial ou de criador de conteúdo vinculada a uma Página do Facebook, conforme exigido pela própria Meta.</div>
+      </details>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Murillo Henrique — Universo em Slide</p>
+    <p class="links">
+      <a href="privacidade.html">Política de Privacidade</a><span>·</span><a href="termos.html">Termos de Serviço</a>
+    </p>
+  </footer>
+
+</body>
+</html>
